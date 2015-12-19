@@ -83,8 +83,8 @@ func assetFS() http.FileSystem {
 		fmt.Fprintln(out, `
 func assetFS() *assetfs.AssetFS {
 	for k := range _bintree.Children {
-		return &assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: k}
-	}
+ 		return &assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, Prefix: k} 	
+		}
 	panic("unreachable")
 }`)
 	}
